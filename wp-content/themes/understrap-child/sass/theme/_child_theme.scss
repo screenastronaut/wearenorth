@@ -1,0 +1,109 @@
+/*
+Typography
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font__headings;
+}
+
+a {
+	font-family: $font__headings;
+	font-weight: 600;
+	text-transform: uppercase;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/*
+Header
+*/
+.header {
+	height: 100px;
+
+	.custom-logo-link {
+		img {
+			height: 70px;
+			width: auto;
+		}
+	}
+
+	li.menu-item {
+		margin: 3px 30px 0;
+
+		&.no-cta {
+			a.nav-link {
+				position: relative;
+				display: block;
+
+				&:before,&:after {
+					content: '';			
+					position: absolute;
+					width: 0%;
+					height: 3px;
+					top: 48%;
+					margin-top: -0.5px;
+					background: #000;
+				}
+
+				&:before {
+					left: -2.5px;
+				}
+
+				&:after {
+					right: 2.5px;
+					background: #000;
+					transition: width 0.5s;
+				}
+
+				&:hover {
+					&:before {				
+						background: #000;
+						width: 100%;
+						transition: width 0.5s;
+					}
+
+					&:after {
+						background: transparent;
+						width: 100%;
+						transition: 0s;
+					}
+				}
+			}
+		}
+
+		&.cta {
+			margin-top: 0;
+
+			a.nav-link {
+				border: 3px solid $secondary;
+				color: $secondary;
+				position: relative;
+				transition: all 0.5s;
+
+				&:hover {
+					border: 3px solid $secondary;
+					color: $white;
+				}
+
+				&:after {
+					background: $secondary;
+					position: absolute;
+					content: '';
+					top:0;
+					left: 0;
+					width: 0;
+					height: 100%;
+					// transform-origin:left;
+					transition: all 0.5s;
+					z-index:-1;
+				}
+
+				&:hover:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

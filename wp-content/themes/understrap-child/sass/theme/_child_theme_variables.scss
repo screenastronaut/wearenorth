@@ -1,0 +1,26 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+// As example you find one of the most important Bootstrap variable below: $brand-primary.
+// Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
+// Just add your color code here, compile the theme.scss file to change this color everywhere
+
+/*
+Typography
+ */
+@import "font_mixin";
+@import url('https://fonts.googleapis.com/css?family=Esteban');
+@include fontFace('Geomanist','../fonts/geomanist_webfont_family/04.Geomanist_Regular_webfontkit/geomanist-regular-webfont');
+@include fontFace('Geomanist','../fonts/geomanist_webfont_family/03.Geomanist_Light_webfontkit/geomanist-light-webfont', normal, 300);
+@include fontFace('Geomanist','../fonts/geomanist_webfont_family/06.Geomanist_Medium_webfontkit/geomanist-medium-webfont', normal, 600);
+@include fontFace('Geomanist','../fonts/geomanist_webfont_family/07.Geomanist_Bold_webfontkit/geomanist-bold-webfont', normal, 700);
+
+$font__headings: 'Geomanist', sans-serif;
+$font-family-sans-serif: 'Esteban', 'Times New Roman', serif;
+
+/*
+Colours
+ */
+$body-bg: #f4f4f4;
+$primary: #000;
+$secondary: #444;
