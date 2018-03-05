@@ -1,19 +1,95 @@
 /*
+Grid
+*/
+
+.wrapper {
+	padding: 0;
+}
+
+section {
+	padding-top: $lg-padding;
+	padding-bottom: $lg-padding;
+}
+
+/*
 Typography
 */
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font__headings;
+	padding-bottom: $md-padding;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+p {
+	font-size: 16px;
 }
 
 a {
 	font-family: $font__headings;
 	font-weight: 600;
-	text-transform: uppercase;
 
 	&:hover {
 		text-decoration: underline;
 	}
+
+	&.white-link {
+		color: $white;
+		text-decoration: underline;
+		transition: 0.5s;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&.cta-button {
+		background: $primary;
+		border: 3px solid $primary;
+		color: $white;
+		display: inline-block;
+		font-weight: 400;
+		letter-spacing: 2px;
+		margin: $md-padding 0;
+		padding: 10px 15px;
+		text-transform: uppercase;
+
+		&:hover {
+			background: transparent;
+			color: $primary;
+			text-decoration: none;
+		}
+
+		i.fa {
+			padding-left: 15px;
+		}
+	}
+}
+
+.center-text {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.cta-row {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
 }
 
 /*
@@ -22,7 +98,11 @@ Header
 .header {
 	height: 100px;
 
-	.custom-logo-link {
+	.container {
+		padding: 0;
+	}
+
+	.logo {
 		img {
 			height: 70px;
 			width: auto;
@@ -34,8 +114,9 @@ Header
 
 		&.no-cta {
 			a.nav-link {
-				position: relative;
 				display: block;
+				position: relative;
+				text-transform: uppercase;
 
 				&:before,&:after {
 					content: '';			
@@ -77,18 +158,18 @@ Header
 			margin-top: 0;
 
 			a.nav-link {
-				border: 3px solid $secondary;
-				color: $secondary;
+				border: 3px solid $primary;
+				color: $primary;
 				position: relative;
 				transition: all 0.5s;
 
 				&:hover {
-					border: 3px solid $secondary;
+					border: 3px solid $primary;
 					color: $white;
 				}
 
 				&:after {
-					background: $secondary;
+					background: $primary;
 					position: absolute;
 					content: '';
 					top:0;
@@ -104,6 +185,118 @@ Header
 					width: 100%;
 				}
 			}
+		}
+	}
+}
+
+/*
+Footer
+*/
+
+.footer-wrapper {
+	background: $primary;
+	color: $white;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.site-footer {
+
+	img {
+		margin: 30px 0;
+		width: 200px;
+	}
+
+	.copyright {
+		font-size: 12px;
+	}
+}
+
+/*
+Homepage
+*/
+.our-work {
+	background: $white;
+
+	.our-work-single {
+		cursor: pointer;
+
+		&:hover {
+			&>.our-work-single-about {
+				display: block;
+			}
+		}
+
+		.our-work-single-about {
+			background: rgba(68,68,68,0.6); //$primary
+			color: $white;
+			display: none;
+			height: 100%;
+			padding: 0 30px;
+			width: 100%;
+			z-index: 1;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+	}
+}
+
+.our-services {
+	.our-services-single {
+		text-align: center;
+		
+		.our-services-icon {
+			display: block;
+			height: 100px;
+			margin: 0 auto;
+			width: 100px;
+		}
+
+		h3 {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.our-clients {
+	background: $white;
+		padding: 0 $md-padding;
+
+	.our-clients-text {
+		display: flex;
+		align-items: center;
+		justify-content: center; /* align horizontal */
+	}
+
+	.our-clients-logo {
+		height: 150px;	
+	}
+}
+
+/*
+About
+*/
+.about-agency {
+
+}
+
+.about-founders {
+	background: $white;
+
+	.about-founders-single {
+		margin: 0 auto;
+		text-align: center;
+
+		h3 {
+			padding-bottom: 0;
+		}
+
+		img {
+			width: 100px;
 		}
 	}
 }
