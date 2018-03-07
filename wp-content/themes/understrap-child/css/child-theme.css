@@ -10662,7 +10662,6 @@ p {
   font-size: 16px; }
 
 a {
-  font-family: "Geomanist", sans-serif;
   font-weight: 600; }
   a:hover {
     text-decoration: underline; }
@@ -10693,6 +10692,9 @@ a {
   margin: 0 auto;
   text-align: center; }
 
+.light-text {
+  font-weight: 300; }
+
 .cta-row {
   display: block;
   margin: 0 auto;
@@ -10709,6 +10711,7 @@ Header
     height: 70px;
     width: auto; }
   .header li.menu-item {
+    font-family: "Geomanist", sans-serif;
     margin: 3px 30px 0; }
     .header li.menu-item.no-cta a.nav-link {
       display: block;
@@ -10788,7 +10791,8 @@ Homepage
       color: #fff;
       display: none;
       height: 100%;
-      padding: 0 30px;
+      padding: 20% 30px;
+      text-align: center;
       width: 100%;
       z-index: 1;
       position: absolute;
@@ -10796,6 +10800,8 @@ Homepage
       left: 0;
       bottom: 0;
       right: 0; }
+      .our-work .our-work-single .our-work-single-about .our-work-single-type + .our-work-single-type:before {
+        content: ' | '; }
 
 .our-services .our-services-single {
   text-align: center; }
@@ -10830,5 +10836,30 @@ About
       padding-bottom: 0; }
     .about-founders .about-founders-single img {
       width: 100px; }
+
+/*
+Work
+*/
+.filter {
+  padding-top: 30px; }
+  .filter .filter-text {
+    cursor: pointer;
+    font-weight: 700;
+    margin: 0 15px; }
+    .filter .filter-text:hover, .filter .filter-text.selected {
+      text-decoration: line-through; }
+
+.our-work-grid {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.work-clients {
+  padding: 60px 0; }
+  .work-clients .work-clients-container {
+    display: flex;
+    justify-content: space-evenly; }
+  .work-clients .work-clients-logo {
+    height: 100%;
+    width: 100px; }
 
 /*# sourceMappingURL=child-theme.css.map */

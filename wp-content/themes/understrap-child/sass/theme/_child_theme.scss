@@ -41,7 +41,6 @@ p {
 }
 
 a {
-	font-family: $font__headings;
 	font-weight: 600;
 
 	&:hover {
@@ -86,6 +85,10 @@ a {
 	text-align: center;
 }
 
+.light-text {
+	font-weight: 300;
+}
+
 .cta-row {
 	display: block;
 	margin: 0 auto;
@@ -110,6 +113,7 @@ Header
 	}
 
 	li.menu-item {
+		font-family: $font__headings;
 		margin: 3px 30px 0;
 
 		&.no-cta {
@@ -232,7 +236,8 @@ Homepage
 			color: $white;
 			display: none;
 			height: 100%;
-			padding: 0 30px;
+			padding: 20% 30px;
+			text-align: center;
 			width: 100%;
 			z-index: 1;
 
@@ -241,6 +246,10 @@ Homepage
 			left: 0;
 			bottom: 0;
 			right: 0;
+
+			.our-work-single-type + .our-work-single-type:before {
+				content: ' | ';
+			}
 		}
 	}
 }
@@ -264,7 +273,7 @@ Homepage
 
 .our-clients {
 	background: $white;
-		padding: 0 $md-padding;
+	padding: 0 $md-padding;
 
 	.our-clients-text {
 		display: flex;
@@ -298,5 +307,42 @@ About
 		img {
 			width: 100px;
 		}
+	}
+}
+
+/*
+Work
+*/
+.filter {
+	padding-top: $md-padding;
+
+	.filter-text {
+		cursor: pointer;
+		font-weight: 700;
+		margin: 0 15px;
+
+		&:hover,
+		&.selected {
+			text-decoration: line-through;
+		}
+	}
+}
+
+.our-work-grid {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.work-clients {
+	padding: $lg-padding 0;
+
+	.work-clients-container {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	
+	.work-clients-logo {
+		height: 100%;
+		width: 100px;
 	}
 }
