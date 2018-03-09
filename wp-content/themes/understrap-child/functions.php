@@ -21,6 +21,7 @@ function theme_enqueue_styles() {
 	wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), false);
     wp_enqueue_script( 'fancybox-scripts', get_stylesheet_directory_uri() . '/js/jquery.fancybox.min.js', array(), false);
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
+    wp_enqueue_script( 'google-maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyDZJ6sjBMBOiVefiX_DmnzB7MmfNT9THJQ' );
     wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/main.js', array(), $the_theme->get( 'Version' ), true );
 }
 
@@ -86,3 +87,13 @@ function case_study_cpt() {
 
 }
 add_action( 'init', 'case_study_cpt', 0 );
+
+function my_acf_google_map_api( $api ){
+ 
+ $api['key'] = 'AIzaSyDZJ6sjBMBOiVefiX_DmnzB7MmfNT9THJQ';
+ 
+ return $api;
+ 
+}
+ 
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
