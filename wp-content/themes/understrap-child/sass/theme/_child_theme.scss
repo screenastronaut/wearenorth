@@ -2,6 +2,10 @@
 Grid
 */
 
+html {
+	overflow-x: hidden;
+}
+
 .wrapper {
 	padding: 0;
 }
@@ -11,6 +15,10 @@ section {
 	padding-bottom: $lg-padding;
 }
 
+.no-padding {
+	padding: 0;
+}
+
 /*
 Typography
 */
@@ -18,6 +26,7 @@ Typography
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font__headings;
 	padding-bottom: $md-padding;
+	text-transform: uppercase;
 }
 
 h1 {
@@ -42,6 +51,7 @@ p {
 }
 
 a {
+	font-family: 'Geomanist', sans-serif;
 	font-weight: 600;
 
 	&:hover {
@@ -88,6 +98,10 @@ a {
 
 .light-text {
 	font-weight: 300;
+}
+
+.italic-text {
+	font-style: italic;
 }
 
 .cta-row {
@@ -206,7 +220,9 @@ Footer
 }
 
 .site-footer {
-
+	h3 {
+		text-transform: none;
+	}
 	img {
 		margin: 30px 0;
 		width: 200px;
@@ -222,7 +238,7 @@ Homepage
 */
 .introduction {
 	p {
-		font-size: 20px;
+		font-size: 18px;
 	}
 }
 .our-work {
@@ -265,6 +281,11 @@ Homepage
 }
 
 .our-services {
+
+	.our-services-top {
+		margin-top: $lg-padding;
+	}
+
 	.our-services-single {
 		text-align: center;
 		
@@ -276,7 +297,7 @@ Homepage
 		}
 
 		h3 {
-			padding-bottom: 0;
+			padding: $md-padding 0 $sm-padding;
 		}
 
 		a.cta-button {
@@ -293,6 +314,10 @@ Homepage
 		display: flex;
 		align-items: center;
 		justify-content: center; /* align horizontal */
+
+		h2 {
+			text-transform: none;
+		}
 	}
 
 	.our-clients-logo {
@@ -304,7 +329,9 @@ Homepage
 About
 */
 .about-agency {
-
+	p {
+		font-size: 18px;
+	}
 }
 
 .about-founders {
@@ -428,4 +455,33 @@ Contact
 /* fixes potential theme css conflict */
 .acf-map img {
 	max-width: inherit !important;
+}
+
+/*
+Single Work
+*/
+.single-work {
+	padding: 0;
+}
+
+.single-work-cover {
+	height: 400px;
+
+	.single-work-brief {
+		color: $white;
+		padding: $xl-padding 0;
+
+		h1 {
+			padding-top: $md-padding;
+		}
+
+		.our-work-single-type {
+			color: $white;
+			font-weight: normal;
+		}
+
+		.our-work-single-type + .our-work-single-type:before {
+			content: ' | ';
+		}
+	}
 }

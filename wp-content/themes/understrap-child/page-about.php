@@ -50,7 +50,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 								echo '<a href="javascript:;"data-src="#hidden-content"  data-fancybox><img class="photo" src="'.get_sub_field('photo').'" alt="">';
 								echo '<h3>'.get_sub_field('name').'</h3></a>';
 								echo '<p>'.get_sub_field('title').'</p>';
-								echo '<a href="javascript:;" data-src="#hidden-content" data-fancybox><i class="fa fa-lg fa-info-circle"></i></a>';
 								echo '<a href="'.get_sub_field('linkedin').'" target="_blank"><i class="fa fa-lg fa-linkedin-square"></i></a>';
 								echo '<div style="display: none;" id="hidden-content">'.get_sub_field('bio').'</div>';
 								echo '</div>';

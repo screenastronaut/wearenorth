@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div><!-- .row -->
 
-			<div class="row">
+			<div class="row our-services-top">
 
 				<?php
 				$strategy = get_field('strategy');
@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<img class="our-services-icon" src="<?php echo $strategy['icon']['url']; ?>" alt="">
 						<h3>Strategy</h3>
 						<p><?php echo $strategy['desc'];?></p>
-						<a href="#strategy" class="cta-button has-arrow">Read More<i class="fa fas fa-long-arrow-right"></i></a>
+						<a href="#strategy" class="cta-button has-arrow">Read More</i></a>
 					</div>
 					<?php
 				endif;
@@ -51,7 +51,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<img class="our-services-icon" src="<?php echo $creative['icon']['url']; ?>" alt="">
 						<h3>Creative</h3>
 						<p><?php echo $creative['desc'];?></p>
-						<a href="#creative" class="cta-button has-arrow">Read More<i class="fa fas fa-long-arrow-right"></i></a>
+						<a href="#creative" class="cta-button has-arrow">Read More</i></a>
 					</div>
 					<?php
 				endif;
@@ -61,7 +61,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<img class="our-services-icon" src="<?php echo $branding['icon']['url']; ?>" alt="">
 						<h3>Branding</h3>
 						<p><?php echo $branding['desc'];?></p>
-						<a href="#branding" class="cta-button has-arrow">Read More<i class="fa fas fa-long-arrow-right"></i></a>
+						<a href="#branding" class="cta-button has-arrow">Read More</i></a>
 					</div>
 					<?php
 				endif;
@@ -71,7 +71,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<img class="our-services-icon" src="<?php echo $digital['icon']['url']; ?>" alt="">
 						<h3>Digital</h3>
 						<p><?php echo $digital['desc'];?></p>
-						<a href="#digital" class="cta-button has-arrow">Read More<i class="fa fas fa-long-arrow-right"></i></a>
+						<a href="#digital" class="cta-button has-arrow">Read More</i></a>
 					</div>
 					<?php
 				endif;

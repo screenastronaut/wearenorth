@@ -10632,6 +10632,9 @@ a.skip-link {
 /*
 Grid
 */
+html {
+  overflow-x: hidden; }
+
 .wrapper {
   padding: 0; }
 
@@ -10639,12 +10642,16 @@ section {
   padding-top: 60px;
   padding-bottom: 60px; }
 
+.no-padding {
+  padding: 0; }
+
 /*
 Typography
 */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Geomanist", sans-serif;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  text-transform: uppercase; }
 
 h1 {
   font-size: 48px; }
@@ -10663,6 +10670,7 @@ p {
   font-size: 16px; }
 
 a {
+  font-family: 'Geomanist', sans-serif;
   font-weight: 600; }
   a:hover {
     text-decoration: underline; }
@@ -10695,6 +10703,9 @@ a {
 
 .light-text {
   font-weight: 300; }
+
+.italic-text {
+  font-style: italic; }
 
 .cta-row {
   display: block;
@@ -10772,6 +10783,8 @@ Footer
   padding: 60px 0;
   text-align: center; }
 
+.site-footer h3 {
+  text-transform: none; }
 .site-footer img {
   margin: 30px 0;
   width: 200px; }
@@ -10782,7 +10795,7 @@ Footer
 Homepage
 */
 .introduction p {
-  font-size: 20px; }
+  font-size: 18px; }
 
 .our-work {
   background: #fff;
@@ -10811,6 +10824,8 @@ Homepage
       .our-work .our-work-single .our-work-single-about .our-work-single-type + .our-work-single-type:before {
         content: ' | '; }
 
+.our-services .our-services-top {
+  margin-top: 60px; }
 .our-services .our-services-single {
   text-align: center; }
   .our-services .our-services-single .our-services-icon {
@@ -10819,7 +10834,7 @@ Homepage
     margin: 0 auto;
     width: 100px; }
   .our-services .our-services-single h3 {
-    padding-bottom: 0; }
+    padding: 30px 0 15px; }
   .our-services .our-services-single a.cta-button {
     margin: 0; }
 
@@ -10831,12 +10846,17 @@ Homepage
     align-items: center;
     justify-content: center;
     /* align horizontal */ }
+    .our-clients .our-clients-text h2 {
+      text-transform: none; }
   .our-clients .our-clients-logo {
     height: 100px; }
 
 /*
 About
 */
+.about-agency p {
+  font-size: 18px; }
+
 .about-founders {
   background: #fff; }
   .about-founders .about-founders-single {
@@ -10922,5 +10942,24 @@ Contact
 /* fixes potential theme css conflict */
 .acf-map img {
   max-width: inherit !important; }
+
+/*
+Single Work
+*/
+.single-work {
+  padding: 0; }
+
+.single-work-cover {
+  height: 400px; }
+  .single-work-cover .single-work-brief {
+    color: #fff;
+    padding: 120px 0; }
+    .single-work-cover .single-work-brief h1 {
+      padding-top: 30px; }
+    .single-work-cover .single-work-brief .our-work-single-type {
+      color: #fff;
+      font-weight: normal; }
+    .single-work-cover .single-work-brief .our-work-single-type + .our-work-single-type:before {
+      content: ' | '; }
 
 /*# sourceMappingURL=child-theme.css.map */

@@ -15,18 +15,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<section class="introduction container" id="content" tabindex="-1">
+		<section class="introduction container no-padding" id="content" tabindex="-1">
 
 			<div class="row">
 
 				<main class="site-main" id="main">
 
-					<?php //get_template_part( 'loop-templates/content', 'page' ); ?>
-
 					<section class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
 						<h1><?php echo get_field('h1_title'); ?></h1>
 						<p><?php echo get_field('intro_copy'); ?></p>
-						<a href="<?php the_field('intro_button_link'); ?>" class="cta-button has-arrow"><?php echo get_field('intro_button_text'); ?><i class="fa fas fa-long-arrow-right"></i></a>
+						<a href="<?php the_field('intro_button_link'); ?>" class="cta-button has-arrow"><?php echo get_field('intro_button_text'); ?></i></a>
 					</section>
 
 				</main><!-- #main -->
@@ -54,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					if($count === 0) echo '<div class="row">';
 
 					?>
-					<a href="#" class="our-work-single <?=$typeclass?>col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background:url('<?php echo $image['url']; ?>');background-size:120%;background-position:center;height:350px">
+					<a href="<?php echo get_permalink($id); ?>" class="our-work-single <?=$typeclass?>col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background:url('<?php echo $image['url']; ?>');background-size:120%;background-position:center;height:350px">
 						<div class="our-work-single-about">
 							<h3><?php echo get_the_title($id); ?></h3>
 							<p><?php echo get_field('case_study_summary', $id); ?></p>
@@ -118,7 +116,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 			
 			<div class="cta-row">
-				<a href="services" class="cta-button has-arrow">What We Do<i class="fa fas fa-long-arrow-right"></i></a>
+				<a href="services" class="cta-button has-arrow">What We Do</i></a>
 			</div>
 
 		</section>
@@ -126,10 +124,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<section class="our-clients container-fluid" id="content" tabindex="-1">
 
 			<div class="row">
-				<div class="our-clients-text col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="our-clients-text offset-xl-1 offset-lg-1 offset-md-1 col-xl-5 col-lg-5 col-md-5 col-sm-6 col-xs-6">
 					<h2>We have worked with some of the most amazing clients in Malaysia and South East Asia.</h2>
 				</div>
-				<div class="our-clients-logos col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="our-clients-logos col-xl-5 col-lg-5 col-md-5 col-sm-6 col-xs-6">
 					<?php
 					if(have_rows('client', 49)) :
 						while(have_rows('client', 49)) : the_row();

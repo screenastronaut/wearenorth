@@ -65,7 +65,7 @@ switch ($post_slug) {
 
 		<section class="our-work our-work-grid container-fluid">
 			<?php
-			if($post_slug === 'work') {
+			if($post_slug === 'our-work') {
 				$args = array(
 					'post_type' => 'case_study_cpt',
 					'post_status' => 'publish',
@@ -91,7 +91,6 @@ switch ($post_slug) {
 				$count = 0; 
 				while($the_query->have_posts()) : $the_query->the_post(); 
 					$image = get_field('cover_image');
-					$size = 'full';
 					$types = get_field('case_study_type');
 					foreach($types as $type) :
 						$typeclass .= $type['value'].' ';
@@ -99,8 +98,7 @@ switch ($post_slug) {
 
 					if($count === 0) echo '<div class="row">';
 					?>
-					<!-- TODO: add link to case study -->
-					<a href="#" class="our-work-single <?=$typeclass?>col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background:url('<?php echo $image['url']; ?>');background-size:cover;height:350px">
+					<a href="<?php the_permalink(); ?>" class="our-work-single <?=$typeclass?>col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background:url('<?php echo $image['url']; ?>');background-size:cover;height:350px">
 						<div class="our-work-single-about">
 							<h3><?php the_title(); ?></h3>
 							<p><?php echo get_field('case_study_summary'); ?></p>
