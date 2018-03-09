@@ -268,6 +268,10 @@ Homepage
 		h3 {
 			padding-bottom: 0;
 		}
+
+		a.cta-button {
+			margin: 0;
+		}
 	}
 }
 
@@ -329,6 +333,7 @@ Work
 }
 
 .our-work-grid {
+	background: $body-bg;
 	padding-top: 0;
 	padding-bottom: 0;
 }
@@ -344,5 +349,31 @@ Work
 	.work-clients-logo {
 		height: 100%;
 		width: 100px;
+	}
+}
+
+/*
+Services
+*/
+.our-services {
+	.site-main {
+		margin-top: $lg-padding;
+	}
+}
+.our-services-row {
+	background: $white;
+	-webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+	margin: $lg-padding 0;
+	padding: $lg-padding;
+
+	.single-service-left {		
+		h3 {
+			padding: 0;
+		}
+		ul {
+			margin-top: $md-padding;
+		}
 	}
 }

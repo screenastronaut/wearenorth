@@ -10812,6 +10812,8 @@ Homepage
     width: 100px; }
   .our-services .our-services-single h3 {
     padding-bottom: 0; }
+  .our-services .our-services-single a.cta-button {
+    margin: 0; }
 
 .our-clients {
   background: #fff;
@@ -10850,6 +10852,7 @@ Work
       text-decoration: line-through; }
 
 .our-work-grid {
+  background: #f4f4f4;
   padding-top: 0;
   padding-bottom: 0; }
 
@@ -10861,5 +10864,23 @@ Work
   .work-clients .work-clients-logo {
     height: 100%;
     width: 100px; }
+
+/*
+Services
+*/
+.our-services .site-main {
+  margin-top: 60px; }
+
+.our-services-row {
+  background: #fff;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  margin: 60px 0;
+  padding: 60px; }
+  .our-services-row .single-service-left h3 {
+    padding: 0; }
+  .our-services-row .single-service-left ul {
+    margin-top: 30px; }
 
 /*# sourceMappingURL=child-theme.css.map */

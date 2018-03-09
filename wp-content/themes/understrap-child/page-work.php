@@ -11,14 +11,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 global $post;
 $post_slug=$post->post_name;
-$allselect = $websiteselect = $creativeselect = $brandingselect = $digitalselect = '';
+$allselect = $strategyselect = $creativeselect = $brandingselect = $digitalselect = '';
 
 switch ($post_slug) {
 	case 'work':
 	$allselect = 'selected';
 	break;
-	case 'website':
-	$websiteselect = 'selected';
+	case 'strategy':
+	$strategyselect = 'selected';
 	break;
 	case 'creative':
 	$creativeselect = 'selected';
@@ -51,7 +51,7 @@ switch ($post_slug) {
 					<div class="filter">
 						<span class="light-text">Filter Work By:</span>
 						<a href=".." class="filter-text <?=$allselect?>">All</a>
-						<a href="website" class="filter-text <?=$websiteselect?>">Website</a>
+						<a href="strategy" class="filter-text <?=$strategyselect?>">Strategy</a>
 						<a href="creative" class="filter-text <?=$creativeselect?>">Creative</a>
 						<a href="branding" class="filter-text <?=$brandingselect?>">Branding</a>
 						<a href="digital" class="filter-text <?=$digitalselect?>">Digital</a>
