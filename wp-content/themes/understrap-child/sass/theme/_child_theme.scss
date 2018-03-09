@@ -220,13 +220,22 @@ Footer
 /*
 Homepage
 */
+.introduction {
+	p {
+		font-size: 20px;
+	}
+}
 .our-work {
 	background: $white;
+	padding: 0;
 
 	.our-work-single {
 		cursor: pointer;
+		transition: all .3s ease-in-out;
 
 		&:hover {
+			background-size: 100% !important;
+
 			&>.our-work-single-about {
 				display: block;
 			}
@@ -278,7 +287,7 @@ Homepage
 
 .our-clients {
 	background: $white;
-	padding: 0 $md-padding;
+	padding: $lg-padding $md-padding;
 
 	.our-clients-text {
 		display: flex;
@@ -287,7 +296,7 @@ Homepage
 	}
 
 	.our-clients-logo {
-		height: 150px;	
+		height: 100px;	
 	}
 }
 

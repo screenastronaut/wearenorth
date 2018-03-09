@@ -10781,12 +10781,19 @@ Footer
 /*
 Homepage
 */
+.introduction p {
+  font-size: 20px; }
+
 .our-work {
-  background: #fff; }
+  background: #fff;
+  padding: 0; }
   .our-work .our-work-single {
-    cursor: pointer; }
-    .our-work .our-work-single:hover > .our-work-single-about {
-      display: block; }
+    cursor: pointer;
+    transition: all .3s ease-in-out; }
+    .our-work .our-work-single:hover {
+      background-size: 100% !important; }
+      .our-work .our-work-single:hover > .our-work-single-about {
+        display: block; }
     .our-work .our-work-single .our-work-single-about {
       background: rgba(68, 68, 68, 0.6);
       color: #fff;
@@ -10818,14 +10825,14 @@ Homepage
 
 .our-clients {
   background: #fff;
-  padding: 0 30px; }
+  padding: 60px 30px; }
   .our-clients .our-clients-text {
     display: flex;
     align-items: center;
     justify-content: center;
     /* align horizontal */ }
   .our-clients .our-clients-logo {
-    height: 150px; }
+    height: 100px; }
 
 /*
 About
